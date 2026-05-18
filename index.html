@@ -1,55 +1,27 @@
+```html
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Sportivo Punilla</title>
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Fuente -->
+  <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<script src="script.js"></script>
-<!-- MODAL -->
 
-<div class="modal" id="lautaroModal">
-
-  <div class="modal-content">
-
-    <span class="close" onclick="closeModal()">
-      &times;
-    </span>
-
-    <img src="img/lautaro.jpg" class="modal-img">
-
-    <h2>Lautaro Pérez</h2>
-
-    <p>
-      Hola mi nombre es Lautaro Rodrigo Agustin Perez.
-      Tengo 17 años y nací el 1ero de julio del 2008.
-      Soy actual jugador del Club Atlético Carlos Paz.
-
-      Estoy cursando mi último año de secundaria,
-      donde tuve especialidad en robótica,
-      y actualmente estoy realizando un curso
-      de entrenador de arqueros.
-
-      Fui parte de Sportivo anteriormente
-      desde la perspectiva de un jugador,
-      y realmente puedo decir que es una experiencia
-      que vale la pena vivir.
-    </p>
-
-  </div>
-
-</div>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
+
     <div class="logo">
       SPORTIVO <span>PUNILLA</span>
     </div>
@@ -57,10 +29,12 @@
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
+      <a href="#camino">camino</a>
       <a href="#viaje">Viaje</a>
       <a href="#staff">Staff</a>
       <a href="#contacto">Contacto</a>
     </nav>
+
   </header>
 
   <!-- HERO -->
@@ -68,7 +42,7 @@
 
     <div class="overlay"></div>
 
-    <img src="img/escudo.png" class="watermark" />
+    <img src="img/e2039e06-6f30-42f2-86fc-8fe83b220213 (1).JPG" class="watermark">
 
     <div class="hero-content">
 
@@ -116,17 +90,153 @@
       </div>
 
       <div class="about-image">
-        <img src="img/equipo.jpg" alt="">
+        <img src="img/equipo.jpg">
       </div>
 
     </div>
 
   </section>
 
-  <!-- CONTADOR -->
+  <!-- VIAJE -->
   <section class="countdown-section" id="viaje">
 
-    <h2>PRÓXIMO VIAJE A BRASIL</h2>
+    <!-- CAMINO HACIA EL VIAJE -->
+  <section class="camino" id="camino">
+
+      <div class="camino-title">
+
+        <img src="img/e2039e06-6f30-42f2-86fc-8fe83b220213 (1).JPG" class="camino-escudo">
+
+        <div>
+
+          <h2>
+            EL CAMINO HACIA EL VIAJE
+          </h2>
+
+          <p>
+            Donde se forja el equipo.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="categorias-box">
+        Categorías 2009 a 2015
+      </div>
+
+      <!-- ITEM -->
+      <div class="camino-item">
+
+        <div class="icon">
+          📢
+        </div>
+
+        <div class="text">
+
+          <h3>
+            Convocatoria y Selección
+          </h3>
+
+          <ul>
+
+            <li>
+              Llamado abierto vía redes sociales para talentos de toda la región.
+            </li>
+
+            <li>
+              Buscamos compromiso y nivel para vestir nuestra camiseta.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="camino-item">
+
+        <div class="icon">
+          ⚽
+        </div>
+
+        <div class="text">
+
+          <h3>
+            Entrenamientos
+          </h3>
+
+          <ul>
+
+            <li>
+              Sesiones semanales y de fin de semana en los predios de Punilla.
+            </li>
+
+            <li>
+              Entrenamientos con foco en táctica y técnica.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="camino-item">
+
+        <div class="icon">
+          ⚔️
+        </div>
+
+        <div class="text">
+
+          <h3>
+            Amistosos de Preparación
+          </h3>
+
+          <p>
+            Partidos de exigencia para medir el nivel,
+            aceitar el juego colectivo y ganar ritmo
+            de competencia internacional.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="camino-item">
+
+        <div class="icon">
+          🏆
+        </div>
+
+        <div class="text">
+
+          <h3>
+            El Objetivo: Competir
+          </h3>
+
+          <p>
+            No vamos solo de paseo.
+            El objetivo es representar a Punilla con orgullo
+            y competir de igual a igual contra clubes locales.
+          </p>
+
+        </div>
+
+      </div>
+
+    
+
+    </section>
+
+    <!-- CONTADOR -->
+    <h2>
+      PRÓXIMO VIAJE A BRASIL
+    </h2>
 
     <div class="countdown">
 
@@ -163,39 +273,49 @@
 
     <div class="staff-container">
 
+      <!-- MARCOS -->
       <div class="card">
 
         <img src="img/staff1.jpg">
 
         <h3>Marcos Ludueña</h3>
 
-        <p>Coordinador General y Director Tecnico</p>
+        <p>
+          Coordinador General y Director Técnico
+        </p>
 
       </div>
 
+      <!-- ARIEL -->
       <div class="card">
 
-        <img src="img/staff2.jpg">
+        <img src="lautaro.jpg">
 
         <h3>Ariel Torrez</h3>
 
-        <p>Coordinador General y Director Técnico</p>
+        <p>
+          Coordinador General y Director Técnico
+        </p>
 
       </div>
 
-       <div class="card clickable-card" onclick="openModal()">
+      <!-- LAUTARO -->
+      <div class="card clickable-card" onclick="openModal()">
 
-       <img src="img/86a74359-3669-450d-ab8a-4728783392ce.JPG">
+        <img src="img/lautaro.jpg">
 
-       <h3>Lautaro Pérez</h3>
+        <h3>Lautaro Pérez</h3>
 
-       <p>Entrenador de Arqueros y Prensa</p>
+        <p>
+          Entrenador de Arqueros y Prensa
+        </p>
 
-       <span class="click-text">
-        Click para conocer más
-       </span>
+        <span class="click-text">
+          Click para conocer más
+        </span>
 
       </div>
+
     </div>
 
   </section>
@@ -209,76 +329,88 @@
 
     <div class="contact-container">
 
-  <a href="https://instagram.com/sportivopunilla2025" target="_blank">
-    Instagram
-  </a>
+      <a href="https://instagram.com/sportivopunilla2025" target="_blank">
+        Instagram
+      </a>
 
-  <a href="https://youtube.com/@sportivopunilla?si=uersEYjrgTaJt-ZQ" target="_blank">
-    YouTube
-  </a>
+      <a href="https://youtube.com/@sportivopunilla" target="_blank">
+        YouTube
+      </a>
 
-  <a href="https://wa.me/543515941466" target="_blank">
-    WhatsApp
-  </a>
+      <a href="https://wa.me/543515941466" target="_blank">
+        WhatsApp
+      </a>
 
-</div>
+    </div>
 
-<div class="contact-info">
+    <div class="contact-info">
 
-  <p>
-    Instagram:
-    @sportivopunilla2025
-  </p>
+      <p>
+        Instagram:
+        @sportivopunilla2025
+      </p>
 
-  <p>
-    YouTube:
-    Sportivo Punilla
-  </p>
+      <p>
+        YouTube:
+        Sportivo Punilla
+      </p>
 
-  <p>
-    Contacto:
-    3515941466
-  </p>
+      <p>
+        Contacto:
+        3515941466
+      </p>
 
-</div>
+    </div>
 
   </section>
 
   <!-- FOOTER -->
   <footer>
+
     <p>
       SPORTIVO PUNILLA © 2026
     </p>
+
   </footer>
-<!-- MODAL LAUTARO -->
 
-<div class="modal" id="lautaroModal">
+  <!-- MODAL LAUTARO -->
+  <div class="modal" id="lautaroModal">
 
-  <div class="modal-content">
+    <div class="modal-content">
 
-    <span class="close" onclick="closeModal()">
-      &times;
-    </span>
+      <span class="close" onclick="closeModal()">
+        &times;
+      </span>
 
-    <img src="img/lautaro.jpg" class="modal-img">
+      <img src="img/lautaro.jpg" class="modal-img" >
 
-    <h2>Lautaro Pérez</h2>
+      <h2>
+        Lautaro Pérez
+      </h2>
 
-    <p>
-      Hola mi nombre es Lautaro Rodrigo Agustin Perez.
-      Tengo 17 años y nací el 1ero de julio del 2008.
+      <p>
+        Hola mi nombre es Lautaro Rodrigo Agustin Perez.
+        Tengo 17 años y nací el 1ero de julio del 2008.
 
-      Soy actual jugador del Club Atlético Carlos Paz y estoy cursando mi último año de secundaria, donde tuve la especialidad de robótica.
+        Soy actual jugador del Club Atlético Carlos Paz
+        y estoy cursando mi último año de secundaria,
+        donde tuve la especialidad de robótica.
 
-      Actualmente también estoy realizando un curso de entrenador de arqueros.
+        Actualmente también estoy realizando un curso
+        de entrenador de arqueros.
 
-      Fui parte de Sportivo anteriormente desde la perspectiva de un jugador, y puedo decir que realmente es una experiencia que vale la pena vivir.
-    </p>
+        Fui parte de Sportivo anteriormente desde la
+        perspectiva de un jugador, y puedo decir que
+        realmente es una experiencia que vale la pena vivir.
+      </p>
+
+    </div>
 
   </div>
 
-</div>
+  <!-- SCRIPT -->
   <script src="script.js"></script>
 
 </body>
 </html>
+```

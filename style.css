@@ -417,3 +417,146 @@ footer{
 
   cursor:pointer;
 }
+/* CAMINO */
+
+.camino{
+  padding:100px 8%;
+  background:#06142b;
+}
+
+.camino-title{
+  display:flex;
+  align-items:center;
+  gap:30px;
+
+  margin-bottom:40px;
+}
+
+.camino-escudo{
+  width:120px;
+}
+
+.camino-title h2{
+  font-size:70px;
+  line-height:1;
+
+  color:white;
+
+  font-family:'Anton', sans-serif;
+}
+
+.camino-title p{
+  color:#4b8fff;
+
+  font-size:30px;
+
+  margin-top:10px;
+}
+
+.categorias-box{
+  display:inline-block;
+
+  padding:15px 25px;
+
+  border:2px solid #2d7dff;
+
+  border-radius:12px;
+
+  margin-bottom:60px;
+
+  color:#7eb1ff;
+
+  font-weight:700;
+}
+
+.camino-item{
+  display:flex;
+
+  gap:40px;
+
+  margin-bottom:60px;
+
+  border-bottom:1px solid rgba(255,255,255,0.1);
+
+  padding-bottom:40px;
+}
+
+.icon{
+  font-size:60px;
+}
+
+.text h3{
+  font-size:40px;
+
+  margin-bottom:15px;
+
+  color:white;
+
+  font-family:'Anton', sans-serif;
+}
+
+.text p,
+.text li{
+  color:#d6d6d6;
+
+  line-height:1.8;
+
+  font-size:20px;
+}
+
+.text ul{
+  padding-left:20px;
+}
+
+.staff-box{
+  border:2px solid #2d7dff;
+
+  border-radius:20px;
+
+  padding:30px;
+
+  margin-top:80px;
+}
+
+.staff-box h3{
+  font-size:40px;
+
+  margin-bottom:30px;
+
+  font-family:'Anton', sans-serif;
+}
+
+.staff-line{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:40px;
+
+  flex-wrap:wrap;
+
+  color:#d8d8d8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .camino-title{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .camino-title h2{
+    font-size:45px;
+  }
+
+  .camino-item{
+    flex-direction:column;
+  }
+
+  .text h3{
+    font-size:30px;
+  }
+
+}
