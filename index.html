@@ -12,7 +12,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+<script src="script.js"></script>
+<!-- MODAL -->
 
+<div class="modal" id="lautaroModal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">
+      &times;
+    </span>
+
+    <img src="img/lautaro.jpg" class="modal-img">
+
+    <h2>Lautaro Pérez</h2>
+
+    <p>
+      Hola mi nombre es Lautaro Rodrigo Agustin Perez.
+      Tengo 17 años y nací el 1ero de julio del 2008.
+      Soy actual jugador del Club Atlético Carlos Paz.
+
+      Estoy cursando mi último año de secundaria,
+      donde tuve especialidad en robótica,
+      y actualmente estoy realizando un curso
+      de entrenador de arqueros.
+
+      Fui parte de Sportivo anteriormente
+      desde la perspectiva de un jugador,
+      y realmente puedo decir que es una experiencia
+      que vale la pena vivir.
+    </p>
+
+  </div>
+
+</div>
 <body>
 
   <!-- NAVBAR -->
@@ -150,16 +183,19 @@
 
       </div>
 
-      <div class="card">
+       <div class="card clickable-card" onclick="openModal()">
 
-        <img src="img/86a74359-3669-450d-ab8a-4728783392ce.JPG">
+       <img src="img/86a74359-3669-450d-ab8a-4728783392ce.JPG">
 
-        <h3>Lautaro Pérez</h3>
+       <h3>Lautaro Pérez</h3>
 
-        <p>Entrenador de Arqueros y Prensa</p>
+       <p>Entrenador de Arqueros y Prensa</p>
+
+       <span class="click-text">
+        Click para conocer más
+       </span>
 
       </div>
-
     </div>
 
   </section>

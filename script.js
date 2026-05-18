@@ -2,7 +2,15 @@
 
 // FECHA DEL VIAJE
 const tripDate = new Date("Jan 10, 2026 00:00:00").getTime();
+// MODAL
 
+function openModal(){
+  document.getElementById("lautaroModal").style.display = "flex";
+}
+
+function closeModal(){
+  document.getElementById("lautaroModal").style.display = "none";
+}
 const countdown = setInterval(() => {
 
   const now = new Date().getTime();
