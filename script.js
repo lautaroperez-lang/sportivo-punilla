@@ -1,38 +1,80 @@
-// script.js
-
 // =============================
-// FECHA DEL VIAJE
+// MODALES
 // =============================
 
-const tripDate = new Date("Jan 10, 2026 00:00:00").getTime();
+// LAUTARO
 
-
-// =============================
-// MODAL LAUTARO
-// =============================
-
-function openModal() {
+function openModall() {
 
   document.getElementById("lautaroModal").style.display = "flex";
 
 }
 
-function closeModal() {
+function closeModall() {
 
   document.getElementById("lautaroModal").style.display = "none";
 
 }
 
 
-// CERRAR MODAL SI HACEN CLICK AFUERA
+// MARCOS
+
+function openModalm() {
+
+  document.getElementById("marcosModal").style.display = "flex";
+
+}
+
+function closeModalm() {
+
+  document.getElementById("marcosModal").style.display = "none";
+
+}
+
+
+// ARIEL
+
+function openModala() {
+
+  document.getElementById("arielModal").style.display = "flex";
+
+}
+
+function closeModala() {
+
+  document.getElementById("arielModal").style.display = "none";
+
+}
+
+
+// =============================
+// CERRAR AL HACER CLICK AFUERA
+// =============================
 
 window.onclick = function(event) {
 
-  const modal = document.getElementById("lautaroModal");
+  const lautaroModal = document.getElementById("lautaroModal");
 
-  if (event.target == modal) {
+  const marcosModal = document.getElementById("marcosModal");
 
-    modal.style.display = "none";
+  const arielModal = document.getElementById("arielModal");
+
+
+  if (event.target == lautaroModal) {
+
+    lautaroModal.style.display = "none";
+
+  }
+
+  if (event.target == marcosModal) {
+
+    marcosModal.style.display = "none";
+
+  }
+
+  if (event.target == arielModal) {
+
+    arielModal.style.display = "none";
 
   }
 

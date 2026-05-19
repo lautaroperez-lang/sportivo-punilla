@@ -90,7 +90,7 @@
       </div>
 
       <div class="about-image">
-        <img src="img/equipo.jpg">
+        <img src="img/equipo.JPG">
       </div>
 
     </div>
@@ -265,152 +265,238 @@
   </section>
 
   <!-- STAFF -->
-  <section class="staff" id="staff">
+  <!-- STAFF -->
+<section class="staff" id="staff">
 
-    <div class="section-title">
-      <h2>NUESTRO STAFF</h2>
-    </div>
+  <div class="section-title">
+    <h2>NUESTRO STAFF</h2>
+  </div>
 
-    <div class="staff-container">
+  <div class="staff-container">
 
-      <!-- MARCOS -->
-      <div class="card">
+    <!-- MARCOS -->
+    <div class="card clickable-card" onclick="openModalm()">
 
-        <img src="img/staff1.jpg">
+      <img src="img/marcos.jpg">
 
-        <h3>Marcos Ludueña</h3>
-
-        <p>
-          Coordinador General y Director Técnico
-        </p>
-
-      </div>
-
-      <!-- ARIEL -->
-      <div class="card">
-
-        <img src="lautaro.jpg">
-
-        <h3>Ariel Torrez</h3>
-
-        <p>
-          Coordinador General y Director Técnico
-        </p>
-
-      </div>
-
-      <!-- LAUTARO -->
-      <div class="card clickable-card" onclick="openModal()">
-
-        <img src="img/lautaro.jpg">
-
-        <h3>Lautaro Pérez</h3>
-
-        <p>
-          Entrenador de Arqueros y Prensa
-        </p>
-
-        <span class="click-text">
-          Click para conocer más
-        </span>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="contact" id="contacto">
-
-    <div class="section-title">
-      <h2>CONTACTO</h2>
-    </div>
-
-    <div class="contact-container">
-
-      <a href="https://instagram.com/sportivopunilla2025" target="_blank">
-        Instagram
-      </a>
-
-      <a href="https://youtube.com/@sportivopunilla" target="_blank">
-        YouTube
-      </a>
-
-      <a href="https://wa.me/543515941466" target="_blank">
-        WhatsApp
-      </a>
-
-    </div>
-
-    <div class="contact-info">
+      <h3>Marcos Ludueña</h3>
 
       <p>
-        Instagram:
-        @sportivopunilla2025
+        Coordinador General y Director Técnico
       </p>
 
-      <p>
-        YouTube:
-        Sportivo Punilla
-      </p>
-
-      <p>
-        Contacto:
-        3515941466
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-
-    <p>
-      SPORTIVO PUNILLA © 2026
-    </p>
-
-  </footer>
-
-  <!-- MODAL LAUTARO -->
-  <div class="modal" id="lautaroModal">
-
-    <div class="modal-content">
-
-      <span class="close" onclick="closeModal()">
-        &times;
+      <span class="click-text">
+        Click para conocer más
       </span>
 
-      <img src="img/lautaro.jpg" class="modal-img" >
+    </div>
 
-      <h2>
-        Lautaro Pérez
-      </h2>
+    <!-- ARIEL -->
+    <div class="card clickable-card" onclick="openModala()">
+
+      <img src="img/ariel.jpg">
+
+      <h3>Ariel Torrez</h3>
 
       <p>
-        Hola mi nombre es Lautaro Rodrigo Agustin Perez.
-        Tengo 17 años y nací el 1ero de julio del 2008.
-
-        Soy actual jugador del Club Atlético Carlos Paz
-        y estoy cursando mi último año de secundaria,
-        donde tuve la especialidad de robótica.
-
-        Actualmente también estoy realizando un curso
-        de entrenador de arqueros.
-
-        Fui parte de Sportivo anteriormente desde la
-        perspectiva de un jugador, y puedo decir que
-        realmente es una experiencia que vale la pena vivir.
+        Coordinador General y Director Técnico
       </p>
+
+      <span class="click-text">
+        Click para conocer más
+      </span>
+
+    </div>
+
+    <!-- LAUTARO -->
+    <div class="card clickable-card" onclick="openModall()">
+
+      <img src="img/lautaro.jpg">
+
+      <h3>Lautaro Pérez</h3>
+
+      <p>
+        Entrenador de Arqueros y Prensa
+      </p>
+
+      <span class="click-text">
+        Click para conocer más
+      </span>
 
     </div>
 
   </div>
 
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+
+  <div class="section-title">
+    <h2>CONTACTO</h2>
+  </div>
+
+  <div class="contact-container">
+
+    <a href="https://instagram.com/sportivopunilla2025" target="_blank">
+      Instagram
+    </a>
+
+    <a href="https://youtube.com/@sportivopunilla" target="_blank">
+      YouTube
+    </a>
+
+    <a href="https://wa.me/543515941466" target="_blank">
+      WhatsApp
+    </a>
+
+  </div>
+
+  <div class="contact-info">
+
+    <p>
+      Instagram:
+      @sportivopunilla2025
+    </p>
+
+    <p>
+      YouTube:
+      Sportivo Punilla
+    </p>
+
+    <p>
+      Contacto:
+      3515941466
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <p>
+    SPORTIVO PUNILLA © 2026
+  </p>
+
+</footer>
+
+<!-- ========================= -->
+<!-- MODAL LAUTARO -->
+<!-- ========================= -->
+
+<div class="modal" id="lautaroModal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModall()">
+      &times;
+    </span>
+
+    <img src="img/lautaro.jpg" class="modal-img">
+
+    <h2>
+      Lautaro Pérez
+    </h2>
+
+    <p>
+      Hola mi nombre es Lautaro Rodrigo Agustin Perez.
+      Tengo 17 años y nací el 1ero de julio del 2008.
+
+      Soy actual jugador del Club Atlético Carlos Paz
+      y estoy cursando mi último año de secundaria,
+      donde tuve la especialidad de robótica.
+
+      Actualmente también estoy realizando un curso
+      de entrenador de arqueros.
+
+      Fui parte de Sportivo anteriormente desde la
+      perspectiva de un jugador, y puedo decir que
+      realmente es una experiencia que vale la pena vivir.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- MODAL MARCOS -->
+<!-- ========================= -->
+
+<div class="modal" id="marcosModal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModalm()">
+      &times;
+    </span>
+
+    <img src="img/marcos.jpg" class="modal-img">
+
+    <h2>
+      Marcos Ludueña
+    </h2>
+
+    <p>
+      Mi nombre es Marcos Emanuel Ludueña,
+      nacido el 28/06/1997 en Córdoba Capital,
+      actualmente viviendo en Villa San Nicolás, Malagueño.
+
+      Soy Profesor de Educación Física,
+      recibido en 2022 y además he realizado
+      distintos cursos de preparación física y entrenamiento.
+
+      Tengo experiencia hace más de 10 años trabajando
+      en escuelas de fútbol y clubes de Liga Cordobesa.
+
+      En cuanto a los viajes, llevo 6 años viviendo
+      esta hermosa experiencia, los primeros laborando
+      como DT y PF, y hace algunos años siendo coordinador
+      y forjando lo que hoy es Sportivo Punilla.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- MODAL ARIEL -->
+<!-- ========================= -->
+
+<div class="modal" id="arielModal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModala()">
+      &times;
+    </span>
+
+    <img src="img/ariel.jpg" class="modal-img">
+
+    <h2>
+      Ariel Torrez
+    </h2>
+
+    <p>
+      Coordinador General y Director Técnico
+      de Sportivo Punilla.
+
+      Formando jugadores y acompañando procesos
+      deportivos desde hace años, siendo parte
+      fundamental del crecimiento del proyecto.
+
+      Compromiso, disciplina y pasión por el fútbol
+      son algunos de los valores que transmite
+      dentro y fuera de la cancha.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
 
 </body>
 </html>
-```
