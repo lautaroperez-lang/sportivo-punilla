@@ -266,34 +266,90 @@ section{
 
 /* CONTACTO */
 
-.contact{
-  background:#081122;
+/* ========================= */
+/* CONTACTO RESPONSIVE */
+/* ========================= */
+
+.contact-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  margin-top: 30px;
+
 }
 
-.contact-container{
-  display:flex;
-  justify-content:center;
-  gap:30px;
+.contact-container a {
+
+  text-decoration: none;
+
+  background: #ff7a00;
+
+  color: white;
+
+  padding: 14px 24px;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
 }
 
-.contact-container a{
-  padding:18px 35px;
+.contact-container a:hover {
 
-  border:2px solid #2d7dff;
+  transform: scale(1.05);
 
-  border-radius:10px;
-
-  color:white;
-
-  text-decoration:none;
-
-  transition:0.3s;
 }
 
-.contact-container a:hover{
-  background:#2d7dff;
+.contact-info {
+
+  text-align: center;
+
+  margin-top: 30px;
+
+  line-height: 2;
+
+  font-size: 18px;
+
 }
 
+/* ========================= */
+/* CELULARES */
+/* ========================= */
+
+@media(max-width: 768px){
+
+  .contact-container {
+
+    flex-direction: column;
+
+    gap: 15px;
+
+  }
+
+  .contact-container a {
+
+    width: 80%;
+
+    text-align: center;
+
+  }
+
+  .contact-info {
+
+    font-size: 16px;
+
+    padding: 0 20px;
+
+  }
+
+}
 /* FOOTER */
 
 footer{
