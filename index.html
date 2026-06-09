@@ -1,502 +1,329 @@
-```html
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Sportivo Punilla</title>
-
+  <title>Sportivo Punilla - Plataforma Oficial</title>
   <link rel="stylesheet" href="style.css" />
-
   <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
-
     <div class="logo">
       SPORTIVO <span>PUNILLA</span>
     </div>
-
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
-      <a href="#camino">camino</a>
-      <a href="#viaje">Viaje</a>
+      <a href="#camino">Camino</a>
+      <a href="#viaje">Torneos 2027</a>
+      <a href="#sumate">Sumate</a>
+      <a href="#perfiles">Perfiles</a>
       <a href="#staff">Staff</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#admin-panel" class="admin-nav-link">Panel Admin</a>
     </nav>
-
   </header>
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-
     <div class="overlay"></div>
-
     <img src="img/e2039e06-6f30-42f2-86fc-8fe83b220213 (1).JPG" class="watermark">
-
     <div class="hero-content">
-
-      <h1>
-        MÁS QUE FÚTBOL.<br>
-        UNA EXPERIENCIA<br>
-        PARA TODA LA VIDA.
-      </h1>
-
-      <p>
-        Competí en Brasil representando a Sportivo Punilla.
-      </p>
-
-      <a href="#nosotros" class="btn">
-        CONOCER MÁS
-      </a>
-
+      <h1>MÁS QUE FÚTBOL.<br>UNA EXPERIENCIA<br>PARA TODA LA VIDA.</h1>
+      <p>Competí en Brasil representando a Sportivo Punilla.</p>
+      <a href="#nosotros" class="btn">CONOCER MÁS</a>
     </div>
-
   </section>
 
   <!-- NOSOTROS -->
   <section class="about" id="nosotros">
-
     <div class="section-title">
       <h2>¿QUÉ ES SPORTIVO PUNILLA?</h2>
     </div>
-
     <div class="about-container">
-
       <div class="about-text">
-
-        <p>
-          Sportivo Punilla es una selección formada por jugadores de distintas localidades que comparten una misma pasión: vivir el fútbol de una manera diferente.
-        </p>
-
-        <p>
-          Desde hace más de 6 años realizamos pruebas abiertas y viajes deportivos a distintos puntos de Brasil, brindando la posibilidad de competir, crecer y vivir experiencias inolvidables dentro y fuera de la cancha.
-        </p>
-
-        <p>
-          Creemos en la unión, el sacrificio, la pasión y la hermandad como pilares fundamentales de cada viaje.
-        </p>
-
+        <p>Sportivo Punilla es una selección formada por jugadores de distintas localidades que comparten una misma pasión: vivir el fútbol de una manera diferente.</p>
+        <p>Desde hace más de 6 años realizamos pruebas abiertas y viajes deportivos a distintos puntos de Brasil, brindando la posibilidad de competir, crecer y vivir experiencias inolvidables dentro y fuera de la cancha.</p>
+        <p>Creemos en la unión, el sacrificio, la pasión y la hermandad como pilares fundamentales de cada viaje.</p>
       </div>
-
       <div class="about-image">
-        <img src="img/equipo.JPG">
+        <img src="img/equipo.JPG" alt="Equipo Sportivo Punilla">
       </div>
-
     </div>
-
   </section>
 
-  <!-- VIAJE -->
-  <section class="countdown-section" id="viaje">
-
-    <!-- CAMINO HACIA EL VIAJE -->
+  <!-- CAMINO HACIA EL VIAJE -->
   <section class="camino" id="camino">
-
-      <div class="camino-title">
-
-        <img src="img/e2039e06-6f30-42f2-86fc-8fe83b220213 (1).JPG" class="camino-escudo">
-
-        <div>
-
-          <h2>
-            EL CAMINO HACIA EL VIAJE
-          </h2>
-
-          <p>
-            Donde se forja el equipo.
-          </p>
-
-        </div>
-
+    <div class="camino-title">
+      <img src="img/e2039e06-6f30-42f2-86fc-8fe83b220213 (1).JPG" class="camino-escudo">
+      <div>
+        <h2>EL CAMINO HACIA EL VIAJE</h2>
+        <p>Donde se forja el equipo.</p>
       </div>
+    </div>
+    <div class="categorias-box">Categorías 2009 a 2015</div>
 
-      <div class="categorias-box">
-        Categorías 2009 a 2015
+    <div class="camino-item">
+      <div class="icon">📢</div>
+      <div class="text">
+        <h3>Convocatoria y Selección</h3>
+        <ul>
+          <li>Llamado abierto vía redes sociales para talentos de toda la región.</li>
+          <li>Buscamos compromiso y nivel para vestir nuestra camiseta.</li>
+        </ul>
       </div>
-
-      <!-- ITEM -->
-      <div class="camino-item">
-
-        <div class="icon">
-          📢
-        </div>
-
-        <div class="text">
-
-          <h3>
-            Convocatoria y Selección
-          </h3>
-
-          <ul>
-
-            <li>
-              Llamado abierto vía redes sociales para talentos de toda la región.
-            </li>
-
-            <li>
-              Buscamos compromiso y nivel para vestir nuestra camiseta.
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-      <!-- ITEM -->
-      <div class="camino-item">
-
-        <div class="icon">
-          ⚽
-        </div>
-
-        <div class="text">
-
-          <h3>
-            Entrenamientos
-          </h3>
-
-          <ul>
-
-            <li>
-              Sesiones semanales y de fin de semana en los predios de Punilla.
-            </li>
-
-            <li>
-              Entrenamientos con foco en táctica y técnica.
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-      <!-- ITEM -->
-      <div class="camino-item">
-
-        <div class="icon">
-          ⚔️
-        </div>
-
-        <div class="text">
-
-          <h3>
-            Amistosos de Preparación
-          </h3>
-
-          <p>
-            Partidos de exigencia para medir el nivel,
-            aceitar el juego colectivo y ganar ritmo
-            de competencia internacional.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- ITEM -->
-      <div class="camino-item">
-
-        <div class="icon">
-          🏆
-        </div>
-
-        <div class="text">
-
-          <h3>
-            El Objetivo: Competir
-          </h3>
-
-          <p>
-            No vamos solo de paseo.
-            El objetivo es representar a Punilla con orgullo
-            y competir de igual a igual contra clubes locales.
-          </p>
-
-        </div>
-
-      </div>
-
-    
-
-    </section>
-
-    <!-- CONTADOR -->
-    <h2>
-      PRÓXIMO VIAJE A BRASIL
-    </h2>
-
-    <div class="countdown">
-
-      <div class="time-box">
-        <span id="days">00</span>
-        <p>Días</p>
-      </div>
-
-      <div class="time-box">
-        <span id="hours">00</span>
-        <p>Horas</p>
-      </div>
-
-      <div class="time-box">
-        <span id="minutes">00</span>
-        <p>Minutos</p>
-      </div>
-
-      <div class="time-box">
-        <span id="seconds">00</span>
-        <p>Segundos</p>
-      </div>
-
     </div>
 
+    <div class="camino-item">
+      <div class="icon">⚽</div>
+      <div class="text">
+        <h3>Entrenamientos</h3>
+        <ul>
+          <li>Sesiones semanales y de fin de semana en los predios de Punilla.</li>
+          <li>Entrenamientos con foco en táctica y técnica.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="camino-item">
+      <div class="icon">⚔️</div>
+      <div class="text">
+        <h3>Amistosos de Preparación</h3>
+        <p>Partidos de exigencia para medir el nivel, aceitar el juego colectivo y ganar ritmo de competencia internacional.</p>
+      </div>
+    </div>
+
+    <div class="camino-item">
+      <div class="icon">🏆</div>
+      <div class="text">
+        <h3>El Objetivo: Competir</h3>
+        <p>No vamos solo de paseo. El objetivo es representar a Punilla con orgullo y competir de igual a igual contra clubes locales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIAJES Y CUENTAS REGRESIVAS -->
+  <section class="countdown-section" id="viaje">
+    <div class="section-title">
+      <h2>PRÓXIMOS DESAFÍOS INTERNACIONALES</h2>
+      <p style="color:#2d7dff; font-weight:600; margin-top:-20px;">Rumbo a Brasil 2027</p>
+    </div>
+
+    <div class="copas-container">
+      <!-- COPA TAQUARI -->
+      <div class="copa-card" data-date="2027-01-08T00:00:00">
+        <h3>🏆 Copa Taquari</h3>
+        <span class="copa-fecha">Inicia: 08/01/2027</span>
+        <div class="timer-display">
+          <div class="t-box"><span class="days">00</span><p>Días</p></div>
+          <div class="t-box"><span class="hours">00</span><p>Hrs</p></div>
+          <div class="t-box"><span class="minutes">00</span><p>Min</p></div>
+          <div class="t-box"><span class="seconds">00</span><p>Seg</p></div>
+        </div>
+      </div>
+
+      <!-- COPA TEUTÔNIA -->
+      <div class="copa-card" data-date="2027-01-18T00:00:00">
+        <h3>🏆 Copa Teutônia</h3>
+        <span class="copa-fecha">Inicia: 18/01/2027</span>
+        <div class="timer-display">
+          <div class="t-box"><span class="days">00</span><p>Días</p></div>
+          <div class="t-box"><span class="hours">00</span><p>Hrs</p></div>
+          <div class="t-box"><span class="minutes">00</span><p>Min</p></div>
+          <div class="t-box"><span class="seconds">00</span><p>Seg</p></div>
+        </div>
+      </div>
+
+      <!-- COPA MARAVILHA -->
+      <div class="copa-card" data-date="2027-01-25T00:00:00">
+        <h3>🏆 Copa Maravilha</h3>
+        <span class="copa-fecha">Inicia: 25/01/2027</span>
+        <div class="timer-display">
+          <div class="t-box"><span class="days">00</span><p>Días</p></div>
+          <div class="t-box"><span class="hours">00</span><p>Hrs</p></div>
+          <div class="t-box"><span class="minutes">00</span><p>Min</p></div>
+          <div class="t-box"><span class="seconds">00</span><p>Seg</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN SUMATE (INSCRIPCIONES) -->
+  <section class="sumate-section" id="sumate">
+    <div class="section-title">
+      <h2>SUMATE A SPORTIVO PUNILLA</h2>
+      <p>Elegí tu rol y completá tu postulación para formar parte del plantel o cuerpo técnico.</p>
+    </div>
+
+    <div class="selector-botones">
+      <button class="btn-select" onclick="mostrarFormulario('jugador')">⚽ Inscripción de Jugadores</button>
+      <button class="btn-select" onclick="mostrarFormulario('profesor')">👨‍🏫 Inscripción de Profesores</button>
+    </div>
+
+    <!-- Formulario Jugadores -->
+    <div id="form-jugador" class="form-container-app hidden">
+      <h3>Formulario de Inscripción - Jugadores</h3>
+      <form id="f-jugadores" onsubmit="registrarPostulante(event, 'jugador')">
+        <div class="form-grid">
+          <div class="form-group"><label>Nombre y Apellido *</label><input type="text" id="j-nombre" required></div>
+          <div class="form-group"><label>Fecha de Nacimiento *</label><input type="date" id="j-nacimiento" required></div>
+          <div class="form-group"><label>Categoría *</label><input type="number" id="j-categoria" placeholder="Ej: 2012" required></div>
+          <div class="form-group"><label>DNI *</label><input type="text" id="j-dni" required></div>
+          <div class="form-group"><label>Ciudad *</label><input type="text" id="j-ciudad" required></div>
+          <div class="form-group"><label>Teléfono *</label><input type="tel" id="j-telefono" required></div>
+          <div class="form-group"><label>Club Actual *</label><input type="text" id="j-club-actual" required></div>
+          <div class="form-group"><label>Clubes Anteriores</label><input type="text" id="j-club-previo"></div>
+          <div class="form-group"><label>Posición *</label><input type="text" id="j-posicion" placeholder="Ej: Enganche, Central" required></div>
+          <div class="form-group"><label>Pie Hábil *</label><select id="j-pie"><option>Derecho</option><option>Izquierdo</option><option>Ambidiestro</option></select></div>
+          <div class="form-group"><label>Altura (cm)</label><input type="number" id="j-altura" placeholder="Ej: 165"></div>
+          <div class="form-group"><label>Instagram</label><input type="text" id="j-instagram" placeholder="@usuario"></div>
+          <div class="form-group"><label>Video Destacado (Link Opcional)</label><input type="url" id="j-video" placeholder="YouTube / Drive Link"></div>
+          <div class="form-group full-width"><label>Foto de Perfil *</label><input type="file" id="j-foto" accept="image/*" required></div>
+        </div>
+        <button type="submit" class="btn btn-submit">Enviar Postulación</button>
+      </form>
+    </div>
+
+    <!-- Formulario Profesores -->
+    <div id="form-profesor" class="form-container-app hidden">
+      <h3>Formulario de Inscripción - Profesores / DT</h3>
+      <form id="f-profesores" onsubmit="registrarPostulante(event, 'profesor')">
+        <div class="form-grid">
+          <div class="form-group"><label>Nombre y Apellido *</label><input type="text" id="p-nombre" required></div>
+          <div class="form-group"><label>Edad *</label><input type="number" id="p-edad" required></div>
+          <div class="form-group"><label>Ciudad *</label><input type="text" id="p-ciudad" required></div>
+          <div class="form-group"><label>Teléfono *</label><input type="tel" id="p-telefono" required></div>
+          <div class="form-group"><label>Correo Electrónico *</label><input type="email" id="p-correo" required></div>
+          <div class="form-group"><label>Club Actual *</label><input type="text" id="p-club" required></div>
+          <div class="form-group"><label>Clubes donde trabajó</label><input type="text" id="p-historial"></div>
+          <div class="form-group"><label>Categorías dirigidas</label><input type="text" id="p-categorias"></div>
+          <div class="form-group"><label>Cursos realizados</label><input type="text" id="p-cursos"></div>
+          <div class="form-group"><label>Licencias de Conducción / Conmebol</label><input type="text" id="p-licencias"></div>
+          <div class="form-group full-width"><label>Experiencia (Resumen)</label><textarea id="p-experiencia" rows="3"></textarea></div>
+          <div class="form-group"><label>Foto de Perfil *</label><input type="file" id="p-foto" accept="image/*" required></div>
+          <div class="form-group"><label>CV (Link Opcional a Drive/PDF)</label><input type="url" id="p-cv" placeholder="Enlace a tu CV digital"></div>
+        </div>
+        <button type="submit" class="btn btn-submit">Enviar Postulación</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- VISTAS / PERFILES PÚBLICOS -->
+  <section class="perfiles-section" id="perfiles">
+    <div class="section-title">
+      <h2>PLANTEL Y CUERPO TÉCNICO APROBADO</h2>
+      <p>Nuestros representantes oficiales listos para competir.</p>
+    </div>
+
+    <h3 class="sub-titulo-perfil">⚽ Jugadores</h3>
+    <div class="grid-perfiles" id="contenedor-jugadores">
+      <!-- Tarjetas dinámicas vía JS -->
+      <p class="empty-msg">No hay jugadores aprobados cargados públicamente.</p>
+    </div>
+
+    <h3 class="sub-titulo-perfil" style="margin-top: 60px;">👨‍🏫 Profesores / DT</h3>
+    <div class="grid-perfiles" id="contenedor-profesores">
+      <!-- Tarjetas dinámicas vía JS -->
+      <p class="empty-msg">No hay profesionales aprobados cargados públicamente.</p>
+    </div>
+  </section>
+
+  <!-- PANEL DE APROBACIÓN (ADMIN INTERNO) -->
+  <section class="admin-panel" id="admin-panel">
+    <div class="section-title">
+      <h2>🔒 PANEL DE CONTROL</h2>
+      <p>Moderación y aprobación de fichajes entrantes.</p>
+    </div>
+    <div class="panel-box">
+      <h3>Pendientes de Aprobación</h3>
+      <div id="lista-pendientes">
+        <!-- Elementos de aprobación dinámicos -->
+        <p style="color:#bdbdbd; text-align: center; padding: 20px;">No hay postulaciones pendientes de revisión en este momento.</p>
+      </div>
+    </div>
   </section>
 
   <!-- STAFF -->
-  <!-- STAFF -->
-<section class="staff" id="staff">
-
-  <div class="section-title">
-    <h2>NUESTRO STAFF</h2>
-  </div>
-
-  <div class="staff-container">
-
-    <!-- MARCOS -->
-    <div class="card clickable-card" onclick="openModalm()">
-
-      <img src="img/marcos.jpg">
-
-      <h3>Marcos Ludueña</h3>
-
-      <p>
-        Coordinador General y Director Técnico
-      </p>
-
-      <span class="click-text">
-        Click para conocer más
-      </span>
-
+  <section class="staff" id="staff">
+    <div class="section-title">
+      <h2>NUESTRO STAFF</h2>
     </div>
-
-    <!-- ARIEL -->
-    <div class="card clickable-card" onclick="openModala()">
-
-      <img src="img/ariel.jpg">
-
-      <h3>Ariel Torrez</h3>
-
-      <p>
-        Coordinador General y Director Técnico
-      </p>
-
-      <span class="click-text">
-        Click para conocer más
-      </span>
-
+    <div class="staff-container">
+      <div class="card clickable-card" onclick="openModalm()">
+        <img src="img/marcos.jpg" alt="Marcos">
+        <h3>Marcos Ludueña</h3>
+        <p>Coordinador General y Director Técnico</p>
+        <span class="click-text">Click para conocer más</span>
+      </div>
+      <div class="card clickable-card" onclick="openModala()">
+        <img src="img/ariel.jpg" alt="Ariel">
+        <h3>Ariel Torrez</h3>
+        <p>Coordinador General y Director Técnico</p>
+        <span class="click-text">Click para conocer más</span>
+      </div>
+      <div class="card clickable-card" onclick="openModall()">
+        <img src="img/lautaro.jpg" alt="Lautaro">
+        <h3>Lautaro Pérez</h3>
+        <p>Entrenador de Arqueros y Prensa</p>
+        <span class="click-text">Click para conocer más</span>
+      </div>
     </div>
+  </section>
 
-    <!-- LAUTARO -->
-    <div class="card clickable-card" onclick="openModall()">
-
-      <img src="img/lautaro.jpg">
-
-      <h3>Lautaro Pérez</h3>
-
-      <p>
-        Entrenador de Arqueros y Prensa
-      </p>
-
-      <span class="click-text">
-        Click para conocer más
-      </span>
-
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="section-title">
+      <h2>CONTACTO</h2>
     </div>
+    <div class="contact-container">
+      <a href="https://instagram.com/sportivopunilla2025" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@sportivopunilla" target="_blank">YouTube</a>
+      <a href="https://wa.me/543515941466" target="_blank">WhatsApp</a>
+    </div>
+    <div class="contact-info">
+      <p>Instagram: @sportivopunilla2025</p>
+      <p>YouTube: Sportivo Punilla</p>
+      <p>Contacto: 3515941466</p>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <p>SPORTIVO PUNILLA © 2026</p>
+  </footer>
+
+  <!-- MODALES DE STAFF -->
+  <div class="modal" id="lautaroModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModall()">&times;</span>
+      <img src="img/lautaro.jpg" class="modal-img">
+      <h2>Lautaro Pérez</h2>
+      <p>Hola mi nombre es Lautaro Rodrigo Agustin Perez. Tengo 17 años y nací el 1ero de julio del 2008. Soy actual jugador del Club Atlético Carlos Paz y estoy cursando mi último año de secundaria... Actualmente también estoy realizando un curso de entrenador de arqueros.</p>
+    </div>
   </div>
 
-</section>
-
-<!-- CONTACTO -->
-<section class="contact" id="contacto">
-
-  <div class="section-title">
-    <h2>CONTACTO</h2>
+  <div class="modal" id="marcosModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModalm()">&times;</span>
+      <img src="img/marcos.jpg" class="modal-img">
+      <h2>Marcos Ludueña</h2>
+      <p>Mi nombre es Marcos Emanuel Ludueña, nacido el 28/06/1997 en Córdoba Capital... Soy Profesor de Educación Física, recibido en 2022. En cuanto a los viajes, llevo 6 años viviendo esta hermosa experiencia, forjando lo que hoy es Sportivo Punilla.</p>
+    </div>
   </div>
 
-  <div class="contact-container">
-
-    <a href="https://instagram.com/sportivopunilla2025" target="_blank">
-      Instagram
-    </a>
-
-    <a href="https://youtube.com/@sportivopunilla" target="_blank">
-      YouTube
-    </a>
-
-    <a href="https://wa.me/543515941466" target="_blank">
-      WhatsApp
-    </a>
-
+  <div class="modal" id="arielModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModala()">&times;</span>
+      <img src="img/ariel.jpg" class="modal-img">
+      <h2>Ariel Torrez</h2>
+      <p>Coordinador General y Director Técnico de Sportivo Punilla. Formando jugadores y acompañando procesos deportivos desde hace años, siendo parte fundamental del proyecto. Compromiso, disciplina y pasión.</p>
+    </div>
   </div>
 
-  <div class="contact-info">
-
-    <p>
-      Instagram:
-      @sportivopunilla2025
-    </p>
-
-    <p>
-      YouTube:
-      Sportivo Punilla
-    </p>
-
-    <p>
-      Contacto:
-      3515941466
-    </p>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-
-  <p>
-    SPORTIVO PUNILLA © 2026
-  </p>
-
-</footer>
-
-<!-- ========================= -->
-<!-- MODAL LAUTARO -->
-<!-- ========================= -->
-
-<div class="modal" id="lautaroModal">
-
-  <div class="modal-content">
-
-    <span class="close" onclick="closeModall()">
-      &times;
-    </span>
-
-    <img src="img/lautaro.jpg" class="modal-img">
-
-    <h2>
-      Lautaro Pérez
-    </h2>
-
-    <p>
-      Hola mi nombre es Lautaro Rodrigo Agustin Perez.
-      Tengo 17 años y nací el 1ero de julio del 2008.
-
-      Soy actual jugador del Club Atlético Carlos Paz
-      y estoy cursando mi último año de secundaria,
-      donde tuve la especialidad de robótica.
-
-      Actualmente también estoy realizando un curso
-      de entrenador de arqueros.
-
-      Fui parte de Sportivo anteriormente desde la
-      perspectiva de un jugador, y puedo decir que
-      realmente es una experiencia que vale la pena vivir.
-    </p>
-
-  </div>
-
-</div>
-
-<!-- ========================= -->
-<!-- MODAL MARCOS -->
-<!-- ========================= -->
-
-<div class="modal" id="marcosModal">
-
-  <div class="modal-content">
-
-    <span class="close" onclick="closeModalm()">
-      &times;
-    </span>
-
-    <img src="img/marcos.jpg" class="modal-img">
-
-    <h2>
-      Marcos Ludueña
-    </h2>
-
-    <p>
-      Mi nombre es Marcos Emanuel Ludueña,
-      nacido el 28/06/1997 en Córdoba Capital,
-      actualmente viviendo en Villa San Nicolás, Malagueño.
-
-      Soy Profesor de Educación Física,
-      recibido en 2022 y además he realizado
-      distintos cursos de preparación física y entrenamiento.
-
-      Tengo experiencia hace más de 10 años trabajando
-      en escuelas de fútbol y clubes de Liga Cordobesa.
-
-      En cuanto a los viajes, llevo 6 años viviendo
-      esta hermosa experiencia, los primeros laborando
-      como DT y PF, y hace algunos años siendo coordinador
-      y forjando lo que hoy es Sportivo Punilla.
-    </p>
-
-  </div>
-
-</div>
-
-<!-- ========================= -->
-<!-- MODAL ARIEL -->
-<!-- ========================= -->
-
-<div class="modal" id="arielModal">
-
-  <div class="modal-content">
-
-    <span class="close" onclick="closeModala()">
-      &times;
-    </span>
-
-    <img src="img/ariel.jpg" class="modal-img">
-
-    <h2>
-      Ariel Torrez
-    </h2>
-
-    <p>
-      Coordinador General y Director Técnico
-      de Sportivo Punilla.
-
-      Formando jugadores y acompañando procesos
-      deportivos desde hace años, siendo parte
-      fundamental del crecimiento del proyecto.
-
-      Compromiso, disciplina y pasión por el fútbol
-      son algunos de los valores que transmite
-      dentro y fuera de la cancha.
-    </p>
-
-  </div>
-
-</div>
-
-<!-- SCRIPT -->
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
