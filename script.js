@@ -1,3 +1,12 @@
+import { db } from './firebase.js';
+
+import {
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  where
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 // ==========================================
 // 🏆 CUENTAS REGRESIVAS TRIPLES (V2.0)
 // ==========================================
@@ -57,13 +66,16 @@ function mostrarFormulario(tipo) {
 // ==========================================
 // 🔒 ENGINE DE ALMACENAMIENTO Y PANEL ADMIN (LOCALSTORAGE)
 // ==========================================
-let postulaciones = JSON.parse(localStorage.getItem('punilla_postulaciones')) || [];
+// let postulaciones = JSON.parse(localStorage.getItem('punilla_postulaciones')) || [];
 
-function registrarPostulante(event, tipo) {
+async function registrarPostulante(event, tipo) {
   event.preventDefault();
 
-  const id = Date.now();
-  let nuevoRegistro = { id: id, tipo: tipo, estado: 'pendiente' };
+  let nuevoRegistro = {
+    tipo,
+    estado: 'pendiente',
+    fecha: new Date().toISOString()
+  };
 
   if (tipo === 'jugador') {
     nuevoRegistro.nombre = document.getElementById('j-nombre').value;
@@ -79,10 +91,6 @@ function registrarPostulante(event, tipo) {
     nuevoRegistro.altura = document.getElementById('j-altura').value;
     nuevoRegistro.instagram = document.getElementById('j-instagram').value;
     nuevoRegistro.video = document.getElementById('j-video').value;
-    
-    const fileInput = document.getElementById('j-foto');
-    procesarYGuardar(fileInput, nuevoRegistro, 'f-jugadores');
-
   } else {
     nuevoRegistro.nombre = document.getElementById('p-nombre').value;
     nuevoRegistro.edad = document.getElementById('p-edad').value;
@@ -96,9 +104,22 @@ function registrarPostulante(event, tipo) {
     nuevoRegistro.licencias = document.getElementById('p-licencias').value;
     nuevoRegistro.experiencia = document.getElementById('p-experiencia').value;
     nuevoRegistro.cv = document.getElementById('p-cv').value;
+  }
 
-    const fileInput = document.getElementById('p-foto');
-    procesarYGuardar(fileInput, nuevoRegistro, 'f-profesores');
+  try {
+    await addDoc(collection(db, "postulaciones"), nuevoRegistro);
+
+    alert("✅ Postulación enviada correctamente");
+
+    if (tipo === 'jugador') {
+      document.getElementById('f-jugadores').reset();
+    } else {
+      document.getElementById('f-profesores').reset();
+    }
+
+  } catch (error) {
+    console.error(error);
+    alert("❌ Error al enviar la postulación");
   }
 }
 
