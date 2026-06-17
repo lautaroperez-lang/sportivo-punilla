@@ -12,7 +12,7 @@ import {
 // Función de login ultra simple
 function verificarPassword() {
   const pass = document.getElementById('admin-pass').value;
-  if (pass === "punilla2027") { 
+  if (pass === "MALSP2026") { 
     document.getElementById('admin-login').classList.add('hidden');
     document.getElementById('admin-content').classList.remove('hidden');
     cargarPostulacionesPendientes();
