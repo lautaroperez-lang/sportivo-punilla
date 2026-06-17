@@ -7,6 +7,7 @@ import {
   query,
   where
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
 // ==========================================
 // 🏆 CUENTAS REGRESIVAS TRIPLES (V2.0)
 // ==========================================
@@ -64,10 +65,8 @@ function mostrarFormulario(tipo) {
 }
 
 // ==========================================
-// 🔒 ENGINE DE ALMACENAMIENTO Y PANEL ADMIN (LOCALSTORAGE)
+// 🔒 ENGINE DE ALMACENAMIENTO Y PANEL ADMIN
 // ==========================================
-// let postulaciones = JSON.parse(localStorage.getItem('punilla_postulaciones')) || [];
-
 async function registrarPostulante(event, tipo) {
   event.preventDefault();
 
@@ -108,7 +107,6 @@ async function registrarPostulante(event, tipo) {
 
   try {
     await addDoc(collection(db, "postulaciones"), nuevoRegistro);
-
     alert("✅ Postulación enviada correctamente");
 
     if (tipo === 'jugador') {
@@ -116,121 +114,70 @@ async function registrarPostulante(event, tipo) {
     } else {
       document.getElementById('f-profesores').reset();
     }
-
   } catch (error) {
     console.error(error);
     alert("❌ Error al enviar la postulación");
   }
 }
-
-function procesarYGuardar(fileInput, objeto, formId) {
-  if (fileInput.files && fileInput.files[0]) {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      objeto.foto = e.target.result; // Imagen en formato Base64 para guardarla en LocalStorage
-      postulaciones.push(objeto);
-      localStorage.setItem('punilla_postulaciones', JSON.stringify(postulaciones));
-      alert('¡Postulación enviada con éxito! Queda sujeta a revisión en el panel de aprobación.');
-      document.getElementById(formId).reset();
-      actualizarPantallas();
-    };
-    reader.readAsDataURL(fileInput.files[0]);
-  } else {
-    objeto.foto = 'img/default-profile.png';
-    postulaciones.push(objeto);
-    localStorage.setItem('punilla_postulaciones', JSON.stringify(postulaciones));
-    alert('Postulación enviada sin foto personalizada.');
-    document.getElementById(formId).reset();
-    actualizarPantallas();
-  }
-}
-
-function cambiarEstado(id, nuevoEstado) {
-  postulaciones = postulaciones.map(post => {
-    if (post.id === id) post.estado = nuevoEstado;
-    return post;
-  });
-  localStorage.setItem('punilla_postulaciones', JSON.stringify(postulaciones));
-  actualizarPantallas();
-}
-
-function actualizarPantallas() {
-  const listaPendientes = document.getElementById('lista-pendientes');
+// ==========================================
+// 🌍 CARGAR PERFILES PÚBLICOS APROBADOS DESDE FIREBASE
+// ==========================================
+async function cargarPerfilesPublicos() {
   const contenedorJugadores = document.getElementById('contenedor-jugadores');
   const contenedorProfesores = document.getElementById('contenedor-profesores');
 
-  // Limpiar contenedores
-  listaPendientes.innerHTML = '';
-  contenedorJugadores.innerHTML = '';
-  contenedorProfesores.innerHTML = '';
+  if (!contenedorJugadores || !contenedorProfesores) return; // Por si no está en este HTML
 
-  let pendientesFiltrados = postulaciones.filter(p => p.estado === 'pendiente');
-  let aprobadosFiltrados = postulaciones.filter(p => p.estado === 'aprobado');
+  try {
+    // Consulta: Traer solo los aprobados
+    const q = query(collection(db, "postulaciones"), where("estado", "==", "aprobado"));
+    const querySnapshot = await getDocs(q);
 
-  // Renderizar Pendientes
-  if (pendientesFiltrados.length === 0) {
-    listaPendientes.innerHTML = `<p style="color:#bdbdbd; text-align: center; padding: 20px;">No hay postulaciones pendientes de revisión en este momento.</p>`;
-  } else {
-    pendientesFiltrados.forEach(p => {
-      const div = document.createElement('div');
-      div.className = 'pendiente-item';
-      div.innerHTML = `
-        <div class="pendiente-info">
-          <h4>${p.nombre} <span>(${p.tipo === 'jugador' ? 'Jugador ' + p.categoria : 'Profesor'})</span></h4>
-          <p>Ciudad: ${p.ciudad} | Tel: ${p.telefono}</p>
-        </div>
-        <div class="panel-actions">
-          <button class="btn-action btn-approve" onclick="cambiarEstado(${p.id}, 'aprobado')">Aprobar ✅</button>
-          <button class="btn-action btn-reject" onclick="cambiarEstado(${p.id}, 'rechazado')">Rechazar ❌</button>
-        </div>
-      `;
-      listaPendientes.appendChild(div);
+    let htmlJugadores = "";
+    let htmlProfesores = "";
+
+    querySnapshot.forEach((docSnap) => {
+      const p = docSnap.data();
+      
+      // Si el usuario no mandó foto de perfil, le asignamos una silueta por defecto
+      const fotoPorDefecto = "img/e2039e06-6f30-42f2-86fc-8fe83b220213 (1).JPG"; 
+
+      if (p.tipo === 'jugador') {
+        htmlJugadores += `
+          <div class="p-card">
+            <img src="${p.foto || fotoPorDefecto}" class="p-card-img" alt="${p.nombre}">
+            <div class="p-card-body">
+              <h4>${p.nombre}</h4>
+              <p><strong>Categoría:</strong> ${p.categoria}</p>
+              <p><strong>Posición:</strong> ${p.posicion}</p>
+              <p><strong>Club Actual:</strong> ${p.clubActual}</p>
+              <p><strong>Ciudad:</strong> ${p.ciudad}</p>
+            </div>
+          </div>
+        `;
+      } else if (p.tipo === 'profesor') {
+        htmlProfesores += `
+          <div class="p-card">
+            <img src="${p.foto || fotoPorDefecto}" class="p-card-img" alt="${p.nombre}">
+            <div class="p-card-body">
+              <h4>${p.nombre}</h4>
+              <p><strong>Cargo/Exp:</strong> ${p.experiencia || 'Cuerpo Técnico'}</p>
+              <p><strong>Cursos:</strong> ${p.cursos || 'Ninguno especificado'}</p>
+              <p><strong>Club Actual:</strong> ${p.clubActual}</p>
+            </div>
+          </div>
+        `;
+      }
     });
-  }
 
-  // Renderizar Públicos Aprobados
-  const jugadoresAprobados = aprobadosFiltrados.filter(p => p.tipo === 'jugador');
-  const profesoresAprobados = aprobadosFiltrados.filter(p => p.tipo === 'profesor');
+    // Si hay tarjetas generadas, reemplazamos el mensaje de "No hay aprobados"
+    if (htmlJugadores !== "") contenedorJugadores.innerHTML = htmlJugadores;
+    if (htmlProfesores !== "") contenedorProfesores.innerHTML = htmlProfesores;
 
-  if (jugadoresAprobados.length === 0) {
-    contenedorJugadores.innerHTML = `<p class="empty-msg">No hay jugadores aprobados cargados públicamente.</p>`;
-  } else {
-    jugadoresAprobados.forEach(j => {
-      const card = document.createElement('div');
-      card.className = 'p-card';
-      card.innerHTML = `
-        <img src="${j.foto}" class="p-card-img" alt="${j.nombre}">
-        <div class="p-card-body">
-          <h4>${j.nombre}</h4>
-          <p><strong>Categoría:</strong> ${j.categoria}</p>
-          <p><strong>Club Actual:</strong> ${j.clubActual}</p>
-          <p><strong>Posición:</strong> ${j.posicion}</p>
-        </div>
-      `;
-      contenedorJugadores.appendChild(card);
-    });
-  }
-
-  if (profesoresAprobados.length === 0) {
-    contenedorProfesores.innerHTML = `<p class="empty-msg">No hay profesionales aprobados cargados públicamente.</p>`;
-  } else {
-    profesoresAprobados.forEach(p => {
-      const card = document.createElement('div');
-      card.className = 'p-card';
-      card.innerHTML = `
-        <img src="${p.foto}" class="p-card-img" alt="${p.nombre}">
-        <div class="p-card-body">
-          <h4>${p.nombre}</h4>
-          <p><strong>Experiencia:</strong> ${p.experiencia || 'No especificada'}</p>
-          <p><strong>Cursos:</strong> ${p.cursos || 'Ninguno'}</p>
-          <p><strong>Clubes previos:</strong> ${p.clubesAnteriores || 'Ninguno'}</p>
-        </div>
-      `;
-      contenedorProfesores.appendChild(card);
-    });
+  } catch (error) {
+    console.error("Error cargando perfiles públicos: ", error);
   }
 }
-
 // ==========================================
 // 🏛️ MODALES ORIGINALES DEL STAFF
 // ==========================================
@@ -256,5 +203,17 @@ window.onclick = function(event) {
 // Al cargar el documento, arrancar lógica
 document.addEventListener('DOMContentLoaded', () => {
   inicializarContadores();
-  actualizarPantallas();
+  cargarPerfilesPublicos(); // <-- AGREGA ESTA LÍNEA AQUÍ
 });
+
+// Asignaciones globales para que funcionen los eventos 'onclick' desde el HTML Modules
+window.mostrarFormulario = mostrarFormulario;
+window.registrarPostulante = registrarPostulante;
+window.openModall = openModall;
+window.closeModall = closeModall;
+window.openModalm = openModalm;
+window.closeModalm = closeModalm;
+window.openModala = openModala;
+window.closeModala = closeModala;
+
+console.log("SCRIPT CARGADO CORRECTAMENTE");

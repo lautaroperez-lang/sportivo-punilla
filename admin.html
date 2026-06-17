@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Admin - Sportivo Punilla</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-top: 40px;">
+
+  <header class="navbar" style="position: absolute;">
+    <div class="logo">
+      SPORTIVO <span>PUNILLA</span>
+    </div>
+    <nav>
+      <a href="index.html" class="admin-nav-link" style="background: rgba(255, 122, 0, 0.2); border-color: #ff7a00;">← Volver a la Web</a>
+    </nav>
+  </header>
+
+  <div class="admin-panel" style="margin-top: 100px;">
+    <div class="section-title">
+      <h2>PANEL DE ADMINISTRACIÓN</h2>
+      <p>Gestión de Postulaciones Recibidas</p>
+    </div>
+
+    <div id="admin-login" class="panel-box" style="text-align: center; max-width: 400px; margin: 0 auto 40px auto;">
+      <h3>Ingreso Restringido</h3>
+      <div class="form-group" style="margin-bottom: 15px;">
+        <input type="password" id="admin-pass" placeholder="Contraseña de Administrador">
+      </div>
+      <button class="btn" onclick="verificarPassword()">Ingresar</button>
+    </div>
+
+    <div id="admin-content" class="hidden">
+      
+      <div class="panel-box" style="margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <h3>⚽ Jugadores Pendientes</h3>
+        <div id="lista-jugadores-pendientes" class="grid-perfiles" style="margin-top: 20px;">
+          <p class="empty-msg">Cargando postulaciones...</p>
+        </div>
+      </div>
+
+      <div class="panel-box" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+        <h3>👨‍🏫 Profesores / DT Pendientes</h3>
+        <div id="lista-profesores-pendientes" class="grid-perfiles" style="margin-top: 20px;">
+          <p class="empty-msg">Cargando postulaciones...</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
